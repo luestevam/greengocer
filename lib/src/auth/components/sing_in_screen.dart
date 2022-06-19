@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:greengocer/src/auth/components/custom_text_field.dart';
+import 'package:greengocer/src/auth/components/sign_up_screen.dart';
 import 'package:greengocer/src/config/custom_colors.dart';
 
 class SingInScreen extends StatelessWidget {
@@ -169,7 +170,15 @@ class SingInScreen extends StatelessWidget {
                             color: Colors.green,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (c) {
+                                return SignUpScreen();
+                              },
+                            ),
+                          );
+                        },
                         child: const Text(
                           'Criar Conta',
                           style: TextStyle(

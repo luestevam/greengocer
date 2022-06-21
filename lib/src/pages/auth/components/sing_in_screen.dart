@@ -1,9 +1,9 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:greengocer/src/auth/components/custom_text_field.dart';
-import 'package:greengocer/src/auth/components/sign_up_screen.dart';
-import 'package:greengocer/src/base/base_screen.dart';
 import 'package:greengocer/src/config/custom_colors.dart';
+import 'package:greengocer/src/pages/auth/components/custom_text_field.dart';
+import 'package:greengocer/src/pages/auth/components/sign_up_screen.dart';
+import 'package:greengocer/src/pages/base/base_screen.dart';
 
 class SingInScreen extends StatelessWidget {
   const SingInScreen({super.key});

@@ -1,8 +1,7 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:greengocer/src/config/custom_colors.dart';
+import 'package:greengocer/src/pages/home/components/category_page.dart';
 
 class HomeTab extends StatelessWidget {
   const HomeTab({super.key});
@@ -36,26 +35,30 @@ class HomeTab extends StatelessWidget {
             ],
           ),
         ),
+
+        //BADGE
         actions: [
-          Padding(
-            padding: const EdgeInsets.only(
-              top: 15,
-              right: 15,
-            ),
-            child: GestureDetector(
-              onTap: () {},
-              child: Badge(
-                badgeColor: CustomColors.customContrastColor,
-                badgeContent: const Text(
-                  '0',
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.white,
+          Badge(
+            child: Padding(
+              padding: const EdgeInsets.only(
+                top: 15,
+                right: 15,
+              ),
+              child: GestureDetector(
+                onTap: () {},
+                child: Badge(
+                  badgeColor: CustomColors.customContrastColor,
+                  badgeContent: const Text(
+                    '0',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.white,
+                    ),
                   ),
-                ),
-                child: Icon(
-                  Icons.shopping_cart,
-                  color: CustomColors.customSwatchColor,
+                  child: Icon(
+                    Icons.shopping_cart,
+                    color: CustomColors.customSwatchColor,
+                  ),
                 ),
               ),
             ),
@@ -96,8 +99,12 @@ class HomeTab extends StatelessWidget {
               ),
             ),
           ),
+
+          //CATEGORIAS
+          const CategoryPage(),
         ],
       ),
+
       //GRID
     );
   }

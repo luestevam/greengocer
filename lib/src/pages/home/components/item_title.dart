@@ -16,7 +16,7 @@ class ItemTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        // Conteudo
+        // Conteúdo
         GestureDetector(
           onTap: () {
             Navigator.of(context).push(
@@ -42,7 +42,10 @@ class ItemTitle extends StatelessWidget {
                 children: [
                   //Imagem
                   Expanded(
-                    child: Image.asset(item.imgUrl),
+                    child: Hero(
+                      tag: item.imgUrl,
+                      child: Image.asset(item.imgUrl),
+                    ),
                   ),
 
                   // Nome
@@ -82,7 +85,7 @@ class ItemTitle extends StatelessWidget {
           ),
         ),
 
-        //Botaão de add carrinho
+        //Botão de add carrinho
         Positioned(
           top: 4,
           right: 4,

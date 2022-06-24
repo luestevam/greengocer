@@ -1,6 +1,6 @@
 # greengocer
 
-A new Flutter project.
+Project developed to present an online greengroce store
 
 ## Getting Started
 

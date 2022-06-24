@@ -1,7 +1,10 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
+import 'package:greengocer/src/config/app_data.dart';
 import 'package:greengocer/src/config/custom_colors.dart';
 import 'package:greengocer/src/pages/home/components/category_page.dart';
+import 'package:greengocer/src/config/app_data.dart' as appData;
+import 'package:greengocer/src/pages/home/components/item_title.dart';
 
 class HomeTab extends StatelessWidget {
   const HomeTab({super.key});
@@ -102,10 +105,27 @@ class HomeTab extends StatelessWidget {
 
           //CATEGORIAS
           const CategoryPage(),
+
+          //GRID
+          Expanded(
+            child: GridView.builder(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+              physics: const BouncingScrollPhysics(),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                  childAspectRatio: 9 / 11.5),
+              itemCount: appData.items.length,
+              itemBuilder: (_, index) {
+                return ItemTitle(
+                  item: appData.items[index],
+                );
+              },
+            ),
+          )
         ],
       ),
-
-      //GRID
     );
   }
 }

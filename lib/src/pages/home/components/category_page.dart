@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:greengocer/src/config/app_data.dart' as appData;
 import 'package:greengocer/src/pages/home/category_tile.dart';
 
 class CategoryPage extends StatefulWidget {
@@ -9,14 +10,6 @@ class CategoryPage extends StatefulWidget {
 }
 
 class _CategoryPageState extends State<CategoryPage> {
-  List<String> categories = [
-    'Frutas',
-    'Grãos,',
-    'Verdura',
-    'Temperos',
-    'Cereais',
-  ];
-
   String selectedCategory = 'Frutas';
 
   @override
@@ -30,15 +23,15 @@ class _CategoryPageState extends State<CategoryPage> {
           return CategoryTile(
             onPressed: () {
               setState(() {
-                selectedCategory = categories[index];
+                selectedCategory = appData.categories[index];
               });
             },
-            category: categories[index],
-            isSelected: categories[index] == selectedCategory,
+            category: appData.categories[index],
+            isSelected: appData.categories[index] == selectedCategory,
           );
         },
         separatorBuilder: (_, index) => const SizedBox(width: 8),
-        itemCount: categories.length,
+        itemCount: appData.categories.length,
       ),
     );
   }

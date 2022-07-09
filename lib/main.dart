@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:greengocer/src/pages/auth/components/sing_in_screen.dart';
+import 'package:greengocer/src/pages/auth/sing_in_screen.dart';
 
 void main() {
   runApp(const MyApp());

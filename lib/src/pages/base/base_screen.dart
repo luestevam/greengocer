@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:greengocer/src/pages/cart/car_tab.dart';
 import 'package:greengocer/src/pages/home/homem_tab.dart';
 
 class BaseScreen extends StatefulWidget {
@@ -19,8 +20,8 @@ class _BaseScreenState extends State<BaseScreen> {
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
         children: [
-          HomeTab(),
-          Container(color: Colors.black),
+          const HomeTab(),
+          CartTab(),
           Container(color: Colors.grey),
           Container(color: Colors.red),
         ],
